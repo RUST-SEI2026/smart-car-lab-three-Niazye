@@ -7,11 +7,11 @@ pub(crate) struct State {
 }
 
 impl State {
-    pub(crate) fn be_reverse(&mut self) {
+    pub(crate) fn toggle_reverse(&mut self) {
         self.is_reverse = !self.is_reverse;
     }
 
-    pub(crate) fn be_fast(&mut self) {
+    pub(crate) fn toggle_fast(&mut self) {
         self.is_fast = !self.is_fast;
     }
 
