@@ -1,3 +1,4 @@
+use super::state::Assembler;
 use super::state::State;
 use crate::Pose;
 
@@ -20,8 +21,8 @@ impl Executor {
                 'B' => self.state.toggle_reverse(),
                 'F' => self.state.toggle_fast(),
                 _ => {
-                    let astions = self.state.assemble(cmd);
-                    for action in astions {
+                    let actions = self.state.assemble(cmd);
+                    for action in actions {
                         action.perform(&mut self.pose)
                     }
                 }
